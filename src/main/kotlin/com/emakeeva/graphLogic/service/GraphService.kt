@@ -9,6 +9,7 @@ class GraphService : IGraphService {
     private var graph: Graph? = null
 
     override fun create(graphBody: GraphBody) {
+        graph = null
         graph = Graph.generateGraph(graphBody.numberOfVertices, graphBody.fromRange, graphBody.toRange)
     }
 
