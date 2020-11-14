@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class GraphsController() {
+class GraphController() {
     private lateinit var graphService: GraphService
 
     @Autowired
