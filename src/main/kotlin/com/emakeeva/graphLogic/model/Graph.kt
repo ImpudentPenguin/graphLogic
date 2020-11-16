@@ -28,10 +28,10 @@ class Graph(
 
         private fun validateParams(vertices: Int, leftBound: Double, rightBound: Double) {
             when {
-                vertices > 10 -> throw LimitVerticesException()
+                vertices > 15 -> throw LimitVerticesException()
                 vertices == 1 -> throw GraphHasOneVertexException()
                 vertices < 1 -> throw GraphHasntVerticesException()
-                !(leftBound >= 1 && rightBound <= 100) -> throw DistanceException()
+                !(leftBound >= 1 && rightBound <= 200) -> throw DistanceException()
             }
         }
     }
