@@ -78,7 +78,7 @@ class GraphLogicApplicationTests {
     @Test
     @Description("TASD-18")
     fun `call create method with an incorrect distance should return error`() {
-        val graphBody = GraphBody(numberOfVertices = 5, fromRange = 1.0, toRange = 150.0)
+        val graphBody = GraphBody(numberOfVertices = 5, fromRange = 1.0, toRange = 300.0)
 
         val result = mockMvc.perform(post("/create")
                 .content(ObjectMapper().writeValueAsString(graphBody))
@@ -106,7 +106,7 @@ class GraphLogicApplicationTests {
     @Test
     @Description("TASD-20")
     fun `call create method with large vertex should return error`() {
-        val graphBody = GraphBody(numberOfVertices = 15, fromRange = 1.0, toRange = 100.0)
+        val graphBody = GraphBody(numberOfVertices = 20, fromRange = 1.0, toRange = 100.0)
 
         val result = mockMvc.perform(post("/create")
                 .content(ObjectMapper().writeValueAsString(graphBody))
