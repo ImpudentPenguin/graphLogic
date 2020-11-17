@@ -28,7 +28,7 @@ dependencies {
 tasks.withType<Test> {
 	useJUnitPlatform()
 	testLogging {
-		events("started", "passed", "skipped", "failed")
+		events("passed", "skipped", "failed")
 	}
 }
 
